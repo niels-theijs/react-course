@@ -12,6 +12,7 @@ class CardList extends Component {
                     return (
                             <CardContainer 
                                 object={monster} 
+                                key={monster.id}
                             />
                         )
                     } 
