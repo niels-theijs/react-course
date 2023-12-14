@@ -1,10 +1,21 @@
-import CategoriesContainer from "./components/categories-container/categories-container.component";
-import Categories from "./components/categories/categories";
+import { Routes, Route } from "react-router-dom"
+import Home from "./routes/home/home.component";
+import Navigation from "./routes/navigation/navigation.component";
+
+const Shop = () => {
+  return <h1>THE SHOP</h1>
+}
+
 
 const App = () => {
   return (
-    <CategoriesContainer categories={ Categories }/>
-  )  
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+        <Route path="shop" element={<Shop />} />
+      </Route>
+    </Routes>
+  );
 };
 
 export default App;
